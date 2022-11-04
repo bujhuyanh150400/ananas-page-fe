@@ -1,0 +1,395 @@
+main{
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.payment_container{
+    margin: 3rem 0;
+}
+.info_container{
+    width: 50%;
+    margin-right: 3rem;
+}
+.detail_container{
+    width: 50%;
+}
+.payment_header{
+    padding: 1rem 2rem;
+    line-height: 2.2rem;
+    font-size: var(--norman-font);
+    text-transform: uppercase;
+    background-color: var(--btn-light);
+    color: var(--primary-color);
+    text-align: center ;
+}
+.info_box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+.info_input-box{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.wr-city,
+.wr-district,
+.wr-name,
+.wr-phone,
+.wr-adress{
+    display: none;
+    margin-bottom: 0.2rem;
+    color: var(--primary-color);
+    font-weight: var(--bold-font);
+    font-style: italic;
+}
+.info_input-box > input{
+    outline: none;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    margin-bottom: 2rem;
+    font-weight: var(--medium-font);
+    border: 1px solid var(--text-color-light);
+}
+.info_input-box > input:focus{
+    border: 1px solid var(--text-color-light);
+    -webkit-box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+    box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+}
+.info_select{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.7rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border: 0.1rem solid var(--text-color-light);
+    font-size: var(--text-font);
+    font-weight: var(--medium-font);
+    color: var(--text-color-light);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.info_choose-Hanoi,
+.info_choose-HCM,
+.info_choose{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--white-color);
+    width: 100%;
+    top: 4rem;
+    left: 0;
+    z-index: var(--overlay) ;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+}
+.open_flex{
+    display: flex !important;
+}
+.open-block{
+    display: block !important;
+}
+.info_li{
+    padding: 1rem;
+}
+.info_li:hover{
+    background-color: var(--btn-light);
+}
+.ship_choose{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment_choose-box,
+.ship_money,
+.ship_slow-box{
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+}
+.ship_slow-box{
+    position: relative;
+}
+.payment_choose-box > label,
+.ship_slow-box > label{
+    margin-left: 2rem;
+}
+.payment_choose-box > label > i,
+.ship_slow-box > label > i{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.payment_choose{
+    margin: 2rem 0;
+}
+.payment_choose-box{
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+}
+
+
+.detail_container{
+    background-color: var(--btn-light);
+    padding: 2rem 2rem;
+    height: 50%;
+}
+.detail_payment-header-title{
+    text-align: center ;
+    line-height: 2.2rem;
+    font-size: var(--btn-font);
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--text-color);
+}
+.payment_total,
+.payment_sp-box,
+.detail_sp-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 3rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px dashed var(--text-color-light) ;
+}
+.payment_total{
+    border: none;
+}
+.detail_sp-left{
+    display: flex;
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+    color: var(--text-color-light);
+}
+.detail_sp-p{
+    margin-left: 2rem;
+}
+.sp_name{
+    font-weight: var(--bold-font);
+}
+.sp_img{
+    width: 6rem;
+    height: 6rem;
+}
+.detail_sp-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+    color: var(--text-color-light);
+}
+.payment_sp-left,
+.payment_sp-right{
+    display: flex;
+    flex-direction: column;
+}
+.payment_sp-right{
+    align-items: flex-end;
+}
+.payment_p{
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+    color: var(--text-color-light);
+}
+.payment_total-left,
+.payment_total-right{
+    font-size: var(--btn-font);
+    color: var(--text-color);
+}
+.payment_total-right{
+    color: var(--primary-color);
+}
+.payment-btn{
+    width: 100%;
+    padding: 2rem 0;
+}
+.payment-btn > a{
+    color: var(--white-color);
+    font-size: var(--btn-font);
+}
+
+
+/* Card payment */
+
+.container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: var(--fixed-modal);
+    animation: modalFadeIn ease 0.6s;
+
+}
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+    
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+.btn_submit{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+.submit-btn{
+    width: 40%;
+    background:linear-gradient(45deg, #f15e2c, deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    opacity: .6;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, #f15e2c, deeppink);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    width: auto;
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+.card-holder-name{
+    text-transform: uppercase;
+}
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, #f15e2c, deeppink);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    width: auto;
+    height: 30px;
+}

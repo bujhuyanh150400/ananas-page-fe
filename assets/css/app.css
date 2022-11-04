@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html{
+    font-size: 62.5%; /*=> 10px = 1rem*/
+    scroll-behavior: smooth;
+}
+
+/* Var-CSS */
+:root{
+    /* Font-size & font-family */
+    --body-font:'Roboto Condensed', sans-serif;
+    --normal-font: 1.4rem;
+    --btn-font:2rem;
+    --p-font:1.6rem;
+    --bigger-font:2.3rem;
+    --h1-font: 4rem;
+
+    /* Font-weight */
+    --regular-font:300 ;
+    --medium-font:400 ;
+    --bold-font:700 ;
+
+    /* Color */
+    --primary-color:#f15e2c ; 
+    --text-color:#303030 ;
+    --text-color-light:#808080;
+    --btn-light:#f1f1f1;
+    --white-color:#ffffff ;
+    --bg-color:#4c4c4c;
+
+    /* Z-index */
+    --overlay:10 ;
+    --fixed:100;
+    --fixed-modal:101;
+
+    /* Transition */
+    --tran-0-2:0.2s;
+    --tran-0-3:0.3s;
+    --tran-0-5:0.5s;
+}
+@keyframes Down {
+    From {
+        height:0%;
+
+    }
+    to {
+        height:100%;
+    }
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* Depends on the project */
+body,
+button,
+input{
+    font-family: var(--body-font);
+    font-size: var(--normal-font);
+    font-weight: var(--regular-font);
+    color:var(--text-color);    
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--white-color);
+}
+input{
+    outline: none;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Prepair CSS */
+.section{
+    padding: 8rem 15rem 0 15rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    column-gap: 0.6rem;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 1rem 4rem;
+    color: var(--white-color);
+    font-weight: var(--bold-font);
+    background-color: var(--primary-color);
+    transition: var(--tran-0-2);
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.6;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+    box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+}
+.section-title{
+    width: 100%;
+    line-height: 4.3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: var(--h1-font);
+}
+
+.active{
+    color: var(--primary-color);
+}
+
+
+
+
+/* Navbar */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 11.2rem;
+    z-index: var(--fixed);
+    background-color: var(--white-color);
+    transition: var(--tran-0-3);
+    border-bottom: 1px solid var(--text-color-light);
+}
+.navbar{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 15rem;
+}
+.nav_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav_menu-li{
+    padding: 3rem 1.5rem;
+}
+.nav_menu-link{
+    font-size: var(--btn-font);
+    color: var(--text-color);
+    font-weight: var(--bold-font);
+    letter-spacing: 1px;
+    transition: var(--tran-0-3);
+}
+.nav_menu-li:hover > .nav_menu-link{
+    color: var(--primary-color);
+}
+.nav_menu-li:hover > .nav_menu-link > i{
+    transform: rotate(180deg);
+}
+.nav_box-searching{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_nav-searching{
+    padding: 1rem 2rem 1rem 1.5rem;
+    background: var(--white-color);
+    outline: none;
+    border-bottom-right-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border: 1px solid var(--text-color-light);            
+}
+.btn_nav-searching{
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    border: 1px solid var(--text-color-light); 
+    border-right: none;            
+    color: var(--white-color);
+    font-size: 1.7rem;
+    transition: var(--tran-0-3);
+    cursor: pointer;
+}
+.btn_nav-searching:hover{
+    opacity: 0.6;
+}
+.nav_box-searching input:focus{
+    border-color: var(--primary-color);
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+    box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+}
+.sanpham-li
+.woman-li
+.woman-li{
+    position: relative;
+}
+.woman-li:hover >.nav_nu-dd,
+.men-li:hover > .nav_nam-dd,
+.sanpham-li:hover > .nav_sanpham-dd{
+    display: block;
+}
+.nav_nu-dd,
+.nav_nam-dd,
+.nav_sanpham-dd{
+    position: absolute;
+    display: none;
+    top: 9rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 6rem;
+    
+}
+.nav_nu-dd::before,
+.nav_nam-dd::before,
+.nav_sanpham-dd::before{
+    position: absolute;
+}
+.nav_nu-dd::before{
+    left: 50%;
+}
+.nav_sanpham-dd::before{
+    left: 37%;
+}
+.nav_nam-dd::before{
+    left: 44%;
+}
+.nav_dropdown::before{
+    content: '';
+    top: -20px;
+    z-index: var(--overlay);
+    border: 1rem solid;
+    border-color: transparent transparent var(--bg-color) transparent;
+}
+.dropbox_nav-menu{
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+.for-men{
+    background: url(/assets/img/Menu_Nam.jpg);
+}
+.for-woman{
+    background: url(/assets/img/Menu_Nu.jpg);
+}
+.clother-accessory{
+    background: url(/assets/img/Menu_Phu-kien.jpg);
+}
+.for-sale{
+    background: url(/assets/img/Menu_Sale-off.jpg);
+
+}
+.for-men,
+.for-woman,
+.for-sale,
+.clother-accessory{
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    margin: 0 2.2rem;
+    width: 26rem;
+    height: 26rem;
+}
+.dropbox_menu-li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--tran-0-2);
+}
+.dropbox_menu-li:hover{
+    opacity: 1;
+}
+.dropbox-menu-link{
+    width: 26rem;
+    height: 26rem;
+    line-height: 26rem;
+    text-align: center;
+    color: var(--white-color);
+    font-size: var(--btn-font);
+    font-weight: var(--bold-font);
+}
+.dropbox-title{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    padding: 4rem 0;
+    font-size: var(--btn-font);
+    color: var(--text-color-light);
+    font-weight: var(--medium-font);
+    line-height: 2.4rem;
+}
+.dropbox-title > span{
+    color: var(--white-color);
+}
+.nu-dropbox,
+.nam-dropbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem 28rem;
+}
+
+.dropbox_sanpham{
+    display: flex;
+}
+.dropbox_noibat-title,
+.dropbox_giay-title,
+.dropbox_tt-pk-title{
+    color: var(--white-color);
+    color: var(--white-color);
+    font-size: var(--btn-font);
+    font-weight: var(--bold-font);
+    transition: var(--tran-0-2);
+}
+.noibat-link,
+.giay_link,
+.tt-pk_link{
+    color: var(--text-color-light);
+    font-size: var(--btn-font);
+    font-weight: var(--medium-font);
+    transition: var(--tran-0-2);
+}
+.dropbox_noibat-title:hover,
+.dropbox_giay-title:hover,
+.dropbox_tt-pk-title:hover,
+.noibat-link:hover,
+.giay_link:hover,
+.tt-pk_link:hover{
+    color: var(--primary-color);
+}
+
+
+/* END : Navbar*/
+
+
+
+/* Login - singup section */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: var(--fixed-modal);
+}
+.open {
+    display: flex !important;
+}
+.open_block{
+    display: block !important;
+}
+.modal-container {
+    position: relative;
+    background: var(--white-color);
+    width: 80rem;
+    max-width: calc(100% - 3.2rem);
+    min-height: 40rem;
+    border-radius: 2rem;
+    animation: modalFadeIn ease 0.6s;
+    perspective: 300rem;
+}
+.modal-close-left,
+.modal-close-right{
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: var(--btn-font);
+}
+.modal-close-left{
+    left: 0;
+}
+.modal-close-right{
+    right: 0;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+.modal-body {
+    padding: 2rem;
+}
+.modal_cover{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    transition: all ease var(--tran-0-3);
+    transform-style:preserve-3d;
+    transform-origin: left;
+}
+#flip{
+    display: none;
+}
+#flip:checked ~ .modal_cover{
+    transform: rotateY(-180deg);
+}
+.modal-cover-font,
+.modal-cover-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.modal_cover::before,
+.modal_cover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color-light);
+    opacity: 0.2;
+    z-index: 103;
+}
+.modal-cover-back{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.login-signup_form-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login_form,
+.signup_form{
+    width: calc(100% / 2 - 2rem);
+}
+.login-title-text,
+.signup-title-text{
+    font-size: var(--h1-font);
+    font-weight: var(--bold-font);
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+.login-title-text{
+    text-align: right;
+}
+.login_input-box,
+.signup_input-box{
+    height: 4rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+.login_input-box > input,
+.signup_input-box > input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--text-color-light);
+    padding: 0 1rem;
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+}
+.login_input-box > input:focus,
+.signup_input-box > input:focus{
+    border-color: var(--primary-color);
+}
+.login_forgot-pass{
+    margin: 1rem 0;
+    font-size: var(--p-font);
+    font-weight: var(--bold-font);
+}
+.login_forgot-pass >.forgot-link{
+    color: var(--primary-color);
+}
+.login_forgot-pass >.forgot-link:hover{
+    opacity: 0.6;
+}
+.areadyhave{
+    font-size: var(--p-font);
+    font-style: italic;
+    font-weight: var(--medium-font);
+}
+.areadyhave > label{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.areadyhave > label:hover{
+    opacity: 0.6;
+}
+.wr_loginName,
+.wr_loginPass,
+.wr_signupEmail,
+.wr_signupPass,
+.wr_signupPass2{
+    display: none;
+    margin-bottom: 0.2rem;
+    color: var(--primary-color);
+    font-weight: var(--bold-font);
+    font-style: italic;
+}
+.header_name-login,
+.signup_a,
+.login_a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    color: var(--white-color);
+    text-align: center;
+}
+/* End: modal */
+
+
+/* Footer */
+.footer{
+    background-color: #4c4c4c;
+    padding: 6rem 15rem;
+    margin-top: 8rem;
+    overflow: hidden;
+}
+.footer_menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.footer_menu-ul{
+    padding-right: 15rem;
+}
+.footer-social{
+    padding: 0;
+}
+.footer_menu-li{
+    width: 100% ;
+    line-height: 2.3rem;
+    margin-bottom: 1rem;
+}
+.footer_menu-li:hover > a{
+    color: var(--primary-color);
+}
+.footer_menu-li:first-child > a{
+    font-size: var(--bigger-font);
+    font-weight: var(--bold-font);
+    color: var(--white-color);
+    line-height: 3.68rem;
+}
+.footer-link{
+    color: var(--text-color-light);
+}
+.logo-social > a{
+    font-size: var(--h1-font);
+    padding: 1rem 1.5rem 0 0 ;
+}
+.logo-social:hover > a{
+    color: var(--text-color-light);
+}
+.logo-social > a:hover{
+    color: var(--primary-color);
+}
+.footer_link-logo > img{
+    padding: 3rem 30rem;
+}
+.footer_copyright-content{
+    text-align: center;
+    font-size: var(--btn-font);
+    font-weight: var(--bold-font);
+    color: var(--text-color-light);    
+}
+/* End: Footer */
+
+/* Scroll-bar webkit */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--white-color);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color-light);
+  }

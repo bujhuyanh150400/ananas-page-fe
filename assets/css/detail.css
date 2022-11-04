@@ -1,0 +1,226 @@
+main{
+    margin-top: 3.2rem;
+}
+.detail_header{
+    width: 100%;
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--text-color);
+}
+.detail_direction{
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem 0.8rem 0;
+}
+.detail_dir-li{
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+    padding-right: 1rem;
+    margin-left: 1rem;
+    border-right: 2px solid var(--text-color-light);
+}
+.detail_dir-li > .detail_dir-link{
+    color: var(--text-color);
+}
+.detail_dir-li:last-child{
+    font-weight: var(--bold-font);
+    border: none;
+}
+.detail_dir-li:first-child{
+    margin: 0;
+}
+.detail_container{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.detail_img-container{
+    width: 50%;
+    float: left;
+}
+.detail_img-slick{
+    position: relative;
+}
+.slicker{
+    width: 64rem;
+    height: 64rem;
+    cursor: pointer;
+}
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--primary-color);
+    background-color: var(-bg-color);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.slick-arrow:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.slick-prev{
+    left: 0;
+}
+.slick-next{
+    right: 0;
+}
+
+.detail_payment{
+    width: 50%;
+    padding-left: 5rem;
+    float: left;
+}
+.detail_payment-header{
+    padding-bottom: 2rem;
+    border-bottom: 2px dashed var(--text-color-light);
+}
+.detail_payment-header-title{
+    font-size: var(--h1-font);
+    text-transform: uppercase;
+    margin: 0 0 3rem 0;
+    line-height: 4.2rem;
+}
+.detail_payment-code{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--btn-font);
+    font-weight: var(--medium-font);
+    line-height: 2.24rem;
+    margin-bottom: 3rem;
+}
+.detail_payment-code-left > span,
+.detail_payment-code-right > span{
+    font-weight: var(--bold-font);
+}
+.detail_payment-price{
+    font-size: var(--btn-font);
+    line-height: 2.5rem;
+    color: var(--primary-color);
+}
+.detail_payment_select{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 3rem;
+}
+.detail_payment-size,
+.detail_payment_amount{
+    width: 50%;
+}
+.detail_payment-size{
+    margin-right: 3rem;
+}
+.detail_payment-size-header,
+.detail_payment_amout-header{
+    font-size: var(--btn-font);
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+}
+.detail_amount-select,
+.detail_size_select{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.7rem;
+    padding: 0.8rem 1.6rem;
+    border: 0.1rem solid var(--text-color);
+    font-size: var(--p-font);
+    cursor: pointer;
+}
+.detail_size_select > i {
+    text-align: right;
+}
+.amount_select,
+.select_size{
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: var(--white-color);
+    width: 100%;
+    top: 6rem;
+    left: 0;
+    z-index: var(--overlay) ;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+}
+.size,
+.amount{
+    font-weight: var(--medium-font);
+    border-bottom: 1px;
+}
+.size{
+    padding: 1.38rem;
+}
+.amount{
+    padding: 1.42rem;
+}
+.size:hover,
+.amount:hover{
+    background-color: var(--text-color-light);
+    color: var(--white-color);
+}
+.open_flex{
+    display: flex;
+}
+.detail_payment_button{
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px dashed var(--text-color-light);
+}
+.add_giohang,
+.payment{
+    width: 50%;
+    padding: 2rem 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.add_giohang{
+    background-color: var(--text-color);
+    margin-right: 2rem;
+}
+.add_giohang > a > i,
+.payment > a > i{
+    margin-right: 0.5rem;
+}
+.add_giohang > a,
+.payment > a{
+    color: var(--white-color);
+}
+.detail_sp{
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px dashed var(--text-color-light);
+}
+.detail_sp-title{
+    font-size: var(--btn-font);
+    text-transform: uppercase;
+    line-height: 2.24rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.detail_sp-box{
+    display: none;
+    flex-direction: column;
+    font-weight: var(--medium-font);
+    line-height: 2.24rem;
+    animation: modalFadeIn 0.3s ease-in;
+}
+.detail_sp-img{
+    margin-top: 3rem;
+}
+.open{
+    display: flex;
+}
+

@@ -1,0 +1,223 @@
+/* Section ad slide */
+.ad-slide-section{
+    margin-top: 3.2rem;
+}
+.ad-slide-box{
+    position: relative;
+}
+.slick-dots{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+}
+.slick-dots button{
+    font-size: 0;
+    width: 4rem;
+    height: 0.5rem;
+    background-color: var(--btn-light);
+    outline: none;
+    border: none;
+}
+.slick-dots .slick-active button{
+    background-color:var(--primary-color);
+}
+
+/* END :Section ad slide */
+.news_section-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.new_box-left{
+    padding-right: 2rem;
+}
+.new_box-right{
+    padding-left:2rem ;
+}
+.news_box-img{
+    width: 585px;
+    height: 320px
+}
+.new_box-title{
+    font-size: var(--h1-font);
+    font-weight: var(--bold-font);
+    line-height: 3.3rem;
+    margin: 2.5rem 0;
+}
+.new_box-title > a{
+    color: var(--text-color);
+}
+.new_box-title:hover > a{
+    color: var(--primary-color);
+}
+.new_box-desc{
+    font-size: var(--p-font);
+    line-height: 2.4rem;
+    font-weight: (--medium-font);
+    letter-spacing: 0.1px;
+}
+/* End: Section News */
+
+/* Category section */
+.category-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.category_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.category-man{
+    background: url(/assets/img/catalogy-1.jpg);
+}
+.category-woman{
+    background: url(/assets/img/catalogy-2.jpg);
+}
+.category-sp{
+    background: url(/assets/img/catalogy-3.jpg);
+}
+.category_list{
+    position: relative;
+    width: 39.7rem;
+    height: 27.8rem;
+    margin: 0 0.5rem;
+}
+.category_list::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #5555;
+}
+.category-title,
+.category-li,
+.category-link{
+    z-index: 2;
+}
+.category-title{
+    font-size: var(--bigger-font);
+    line-height: 3.6rem;
+    margin-bottom: 2rem;
+}
+.category-li{
+    font-size: var(--p-font);
+    font-weight: var(--bold-font);
+    line-height: 2.6rem;
+}
+.category-link{
+    color: var(--white-color);
+    transition: var(--tran-0-2);
+}
+.category-title:hover > a,
+.category-li:hover > a,
+.category-link:hover > a{
+    color: var(--primary-color);
+}
+/* End: Category section */
+
+/* Best sale section */
+.bs-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.bs-box{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bs_img-link{
+    margin-bottom: 1.5rem;
+}
+.bs-img{
+    max-width: 100%;
+    height: auto;
+}
+.bs_img-link,
+.bs-title-link,
+.bs-color,
+.bs-price{
+    line-height: 3rem;
+    text-align: center;
+}
+.bs-title-link:hover > .bs-link{
+    color: var(--primary-color);
+}
+.bs-link{
+    color: var(--text-color);
+}
+.bs-color{
+    font-size: var(--p-font);
+}
+.bs-price{
+    font-size: var(--p-font);
+    font-weight: var(--bold-font);
+}
+/* End: Best sale section */
+
+/* banner section */
+.banner-section{
+    padding: 8rem 0 0 0;
+}
+.banner-img{
+    height: 50vw;
+    width: 100vw;
+    max-width: 1920px;
+}
+/* End: banner section */
+
+/* notice section */
+.nt-box-up,
+.nt-box-down{
+    display: flex;
+    justify-content: center;
+}
+.nt-box-up{
+    margin-bottom: 2rem;
+}
+.nt-left{
+    padding-right:2rem ;
+}
+.nt-right{
+    padding-left:2rem;
+}
+.nt-img{
+    width: 585px;
+    height: 320px
+}
+.nt-link-title{
+    margin-top: 1rem;
+    font-size: var(--bigger-font);
+    line-height: 3.3rem;
+}
+.nt-link{
+    color: var(--text-color);
+}
+.nt-link-title:hover > .nt-link{
+    color: var(--primary-color);
+}
+.nt-read-more,
+.nt-desc{
+    letter-spacing: 0.1px;
+    line-height: 2.4rem;
+}
+.nt-desc{
+    font-weight: var(--medium-font);
+}
+.nt-read-more{
+    font-style: italic;
+    font-weight: var(--bold-font);
+    color: var(--primary-color);
+}
+/* End: notice section */
+
