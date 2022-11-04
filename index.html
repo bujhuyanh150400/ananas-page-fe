@@ -8,7 +8,7 @@
 
 
     <!-- CSS Chung -->
-    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <!-- Box-icon -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- slick slide -->
@@ -19,7 +19,7 @@
       />
 
     <!-- CSS landing-page -->
-    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
    
 </head>
 <body>
@@ -27,13 +27,13 @@
     <header class="header">
         <nav class="navbar nav_landingpage">
             <div class="nav_logo">
-                <a href="#" class="nav_logo-link">
-                    <img src="../assets/img/Logo_Ananas_Header.svg" alt="" class="nav_logo-img" style="width:50px;height:87px;">
+                <a href="index.html" class="nav_logo-link">
+                    <img src="/assets/img/Logo_Ananas_Header.svg" alt="" class="nav_logo-img" style="width:50px;height:87px;">
                 </a>
             </div>
             <ul class="nav_menu">
                 <li class="nav_menu-li sanpham-li">
-                    <a href="#" class="nav_menu-link">SẢN PHẨM<i class='bx bx-chevron-down'></i></a>
+                    <a href="/menu.html" class="nav_menu-link">SẢN PHẨM<i class='bx bx-chevron-down'></i></a>
                     <div class="nav_dropdown nav_sanpham-dd">
                         <ul class="dropbox_nav-menu sanpham-dropbox">
                             <li class="dropbox_menu-li for-men"><a href="#" class="dropbox-menu-link">NAM</a></li>
@@ -112,30 +112,94 @@
                     <a href="#" class="nav_menu-link">SALE OFF</a>
                 </li>
             </ul>
-            <div class="nav_box-searching">
+            <!-- <div class="nav_box-searching"> 
                 <i class="bx bx-search btn_nav-searching"></i>
                 <input type="text" placeholder="Tìm kiếm" class="input_nav-searching">
+            </div> -->
+            <div class="nav_login">
+                <button class="btn btn-login js-open">Đăng nhập</button>
             </div>
         </nav>
     </header>
     <!-- End:Header -->
+    
+    <!-- Login - signup modal -->
+    <div class="modal login-modal">
+        <div class="modal-container login_modal-container">
+            <div class="modal-close-left js-modal-close">
+                <i class='bx bx-x'></i>
+            </div>
+            <div class="modal-close-right js-modal-close">
+                <i class='bx bx-x'></i>
+            </div>
+            <input type="checkbox" id="flip">
+            <div class="modal_cover">
+                <div class="modal-cover-font">
+                    <img src="/assets/img/Banner_Clothing.jpg" alt="">
+                </div>
+                <div class="modal-cover-back">
+                    <img class="cover_back-img" src="/assets/img/catalogy-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="modal-body">
+               <form action="#" class="login-signup_form-section">
+                    <div class="login_form">
+                        <div class="login-title">
+                            <h1 class="login-title-text">Đăng nhập</h1>
+                        </div>
+                        <div class="login_input-box">
+                            <p class="wr_loginName">Vui lòng nhập họ tên</p>
+                            <input type="text" name="" id="login_name" placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="login_input-box">
+                            <p class="wr_loginPass">Vui lòng nhập mật khẩu</p>
+                            <input type="password" name="" id="login_pass" placeholder="Mật khẩu">
+                        </div>
+                        <div class="login_forgot-pass"><a href="#" class="forgot-link">Bạn quên mật khẩu ?</a></div>
+                        <div class="login_input-box btn login-btn"> <a href="index_login.html" class="login_a">Đăng nhập</a></div>
+                        <p class="areadyhave">Bạn chưa có tài khoản ? <label for="flip">Đăng kí</label></p>
+                    </div>
+                    <div class="signup_form">
+                        <div class="signup-title">
+                            <h1 class="signup-title-text">Đăng kí</h1>
+                        </div>
+                        <div class="signup_input-box">
+                            <p class="wr_signupEmail">Vui lòng nhập Email</p>
+                            <input type="text" name="" id="signup_email" placeholder="Email của bạn">
+                        </div>
+                        <div class="signup_input-box">
+                            <p class="wr_signupPass">Vui lòng nhập mật khẩu</p>
+                            <input type="password" name="" id="signup_pass" placeholder="Mật khẩu">
+                        </div>
+                        <div class="signup_input-box">
+                            <p class="wr_signupPass2">Vui lòng nhập mật khẩu nhập lại</p>
+                            <input type="password" name="" id="signup_pass2" placeholder="Nhập lại mật khẩu">
+                        </div>
+                        <button class="signup_input-box btn signup-btn"><a href="index.html" class="signup_a">Đăng kí</a></button>
+                        <p class="areadyhave">Bạn có tài khoản rồi ? <label for="flip">Đăng nhập</label></p>
+                    </div>
+               </form>
+            </div>
+        </div>
+    </div>
 
+    <!-- End: Login -->
     <!-- Main -->
     <main>
         <!-- ad slide section -->
         <section class="ad-slide-section section">
             <div class="ad-slide-box">
                 <a href="#" class="ad-slide-link">
-                    <img src="../assets/img/qc-1.png" alt="" class="ad-slide-img">
+                    <img src="/assets/img/qc-1.png" alt="" class="ad-slide-img">
                 </a>
                 <a href="#" class="ad-slide-link">
-                    <img src="../assets/img/qc-2.png" alt="" class="ad-slide-img">
+                    <img src="/assets/img/qc-2.png" alt="" class="ad-slide-img">
                 </a>
                 <a href="#" class="ad-slide-link">
-                    <img src="../assets/img/qc-3.png" alt="" class="ad-slide-img">
+                    <img src="/assets/img/qc-3.png" alt="" class="ad-slide-img">
                 </a>
                 <a href="#" class="ad-slide-link">
-                    <img src="../assets/img/qc-4.png" alt="" class="ad-slide-img">
+                    <img src="/assets/img/qc-4.png" alt="" class="ad-slide-img">
                 </a>
             </div>
         </section>
@@ -146,12 +210,12 @@
             <h1 class="news_section-title section-title">THÔNG BÁO</h1>
             <div class="news_section-box">
                 <div class="new_box-left">
-                    <a href="#" class="new-box_link"><img src="../assets/img/news_box-img1.jpg" alt="" class="news_box-img"></a>
+                    <a href="#" class="new-box_link"><img src="/assets/img/news_box-img1.jpg" alt="" class="news_box-img"></a>
                     <p class="new_box-title"><a href="#">ALL BLACK IN BLACK</a></p>
                     <p class="new_box-desc">Mặc dù được ứng dụng rất nhiều, nhưng sắc đen lúc nào cũng toát lên một vẻ huyền bí không nhàm chán</p>
                 </div>
                 <div class="new_box-right">
-                    <a href="#" class="new-box_link"><img src="../assets/img/news_box-img2.jpg" alt="" class="news_box-img"></a>
+                    <a href="#" class="new-box_link"><img src="/assets/img/news_box-img2.jpg" alt="" class="news_box-img"></a>
                     <p class="new_box-title"><a href="#">OUTLET SALE</a></p>
                     <p class="new_box-desc">Danh mục những sản phẩm bán tại "giá tốt hơn" chỉ được bán kênh online - Online Only, chúng đã từng làm mưa làm gió một thời gian và hiện đang rơi vào tình trạng bể size, bể số.</p>
                 </div>
@@ -191,25 +255,25 @@
             <h1 class="bs_section-title section-title">BEST SELLER</h1>
             <div class="bs-container">
                 <div class="bs-box">
-                    <a href="#" class="bs_img-link"><img src="../assets/img/pro_ABC100_1-500x500.jpg" alt="" class="bs-img"></a>
+                    <a href="#" class="bs_img-link"><img src="/assets/img/pro_ABC100_1-500x500.jpg" alt="" class="bs-img"></a>
                     <h3 class="bs-title-link"><a href="#" class="bs-link">Baseball Cap - Be Positive</a></h3>
                     <p class="bs-color">Pink</p>
                     <p class="bs-price">275.000 VND</p>
                 </div>
                 <div class="bs-box">
-                    <a href="#" class="bs_img-link"><img src="../assets/img/pro_vintas_A61043_1-500x500.jpg" alt="" class="bs-img"></a>
+                    <a href="#" class="bs_img-link"><img src="/assets/img/pro_vintas_A61043_1-500x500.jpg" alt="" class="bs-img"></a>
                     <h3 class="bs-title-link"><a href="#" class="bs-link">Vintas The New Military - High Top</a></h3>
                     <p class="bs-color">Capulet Olive</p>
                     <p class="bs-price">350.000 VND</p>
                 </div>
                 <div class="bs-box">
-                    <a href="#" class="bs_img-link"><img src="../assets/img/stu_basas_A61013_1-500x500.jpg" alt="" class="bs-img"></a>
+                    <a href="#" class="bs_img-link"><img src="/assets/img/stu_basas_A61013_1-500x500.jpg" alt="" class="bs-img"></a>
                     <h3 class="bs-title-link"><a href="#" class="bs-link">Basas New Familiar - Low Top</a></h3>
                     <p class="bs-color">Light Grey</p>
                     <p class="bs-price">420.000 VND</p>
                 </div>
                 <div class="bs-box">
-                    <a href="#" class="bs_img-link"><img src="../assets/img/stu_basas_A61015_11-500x500.jpg" alt="" class="bs-img"></a>
+                    <a href="#" class="bs_img-link"><img src="/assets/img/stu_basas_A61015_11-500x500.jpg" alt="" class="bs-img"></a>
                     <h3 class="bs-title-link"><a href="#" class="bs-link">Basas Mono Black - Low Top</a></h3>
                     <p class="bs-color">All Black</p>
                     <p class="bs-price">420.000 VND</p>
@@ -219,11 +283,11 @@
         <!-- End: Best Sale section -->
 
         <!-- banner section -->
-        <section class="banner-section section">
+        <!-- <section class="banner-section section">
             <a href="" class="banner-link">
-                <img src="../assets/img/Banner_Clothing.jpg" alt="" class="banner-img">
+                <img src="/assets/img/Banner_Clothing.jpg" alt="" class="banner-img">
             </a>
-        </section>
+        </section> -->
         <!-- End: pannel section -->
 
         <!-- notice section -->
@@ -232,13 +296,13 @@
             <div class="nt-container">
                 <div class="nt-box-up">
                     <div class="nt-box nt-left">
-                        <a href="#" class="nt-img-link"><img src="../assets/img/kvngang_mobile_web-300x160.jpg" alt="" class="nt-img"></a>
+                        <a href="#" class="nt-img-link"><img src="/assets/img/kvngang_mobile_web-300x160.jpg" alt="" class="nt-img"></a>
                         <h3 class="nt-link-title"><a href="#" class="nt-link">URBAS CORLURAY PACK</a></h3>
                         <p class="nt-desc">Urbas Corluray Pack đem đến lựa chọn “làm mới mình” với sự kết hợp 5 gam màu mang sắc thu; phù hợp với những người trẻ năng động, mong muốn thể...</p>
                         <a href="#" class="nt-read-more">Đọc thêm</a>
                     </div>
                     <div class="nt-box nt-right">
-                        <a href="#" class="nt-img-link"><img src="../assets/img/Mobile_Blog-1980s_0-300x160.jpg" alt="" class="nt-img"></a>
+                        <a href="#" class="nt-img-link"><img src="/assets/img/Mobile_Blog-1980s_0-300x160.jpg" alt="" class="nt-img"></a>
                         <h3 class="nt-link-title"><a href="#" class="nt-link">VINTAS SAIGON 1980s</a></h3>
                         <p class="nt-desc">Với bộ 5 sản phẩm, Vintas Saigon 1980s Pack đem đến một sự lựa chọn “cũ kỹ thú vị” cho những người trẻ sống giữa thời hiện đại nhưng lại yêu nét bình dị của Sài Gòn ngày xưa ...</p>
                         <a href="#" class="nt-read-more">Đọc thêm</a>
@@ -246,13 +310,13 @@
                 </div>
                 <div class="nt-box-down">
                     <div class="nt-box nt-left">
-                        <a href="#" class="nt-img-link"><img src="../assets/img/peeping_pattas01-300x160.jpg" alt="" class="nt-img"></a>
+                        <a href="#" class="nt-img-link"><img src="/assets/img/peeping_pattas01-300x160.jpg" alt="" class="nt-img"></a>
                         <h3 class="nt-link-title"><a href="#" class="nt-link">SNEAKER FEST VIETNAM VÀ SỰ KẾT HỢP</a></h3>
                         <p class="nt-desc">Việc sử dụng dáng giày Vulcanized High Top của Ananas trong thiết kế và cảm hứng bắt nguồn từ linh vật Peeping - đại diện cho tinh thần xuyên suốt 6 năm qua Sneaker Fest Vietnam...</p>
                         <a href="#" class="nt-read-more">Đọc thêm</a>
                     </div>
                     <div class="nt-box nt-right">
-                        <a href="#" class="nt-img-link"><img src="../assets/img/shoes-anatomy-thumbnail-300x160.jpg" alt="" class="nt-img"></a>
+                        <a href="#" class="nt-img-link"><img src="/assets/img/shoes-anatomy-thumbnail-300x160.jpg" alt="" class="nt-img"></a>
                         <h3 class="nt-link-title"><a href="#" class="nt-link">"GIẢI PHẪU" GIÀY VULCANIZED</a></h3>
                         <p class="nt-desc">Trong phạm vi bài viết ngắn, hãy cùng nhau tìm hiểu cấu tạo giày Vulcanized Sneaker - loại sản phẩm mà Ananas đã chọn làm "cốt lõi" để theo đuổi trong suốt hành trình của mình...</p>
                         <a href="#" class="nt-read-more">Đọc thêm</a>
@@ -299,7 +363,7 @@
         </div>
         <div class="footer_copyright">
             <div class="footer_logo">
-                <a href="#" class="footer_link-logo"><img src="../assets/img/Logo_Ananas_Footer.svg" alt="" class="footer-logo-img"></a>
+                <a href="#" class="footer_link-logo"><img src="/assets/img/Logo_Ananas_Footer.svg" alt="" class="footer-logo-img"></a>
             </div>
             <div class="footer_copyright-content">
                 <p class="copy-right">Copyright © 2022 Alượng. All rights reserved.</p>
@@ -324,7 +388,9 @@
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <!-- Js chung -->
+    <script src="/assets/js/app.js"></script>
     <!-- Javascript -->
-    <script src="../assets/js/index.js"></script>
+    <script src="/assets/js/index.js"></script>
 </body>
 </html>
