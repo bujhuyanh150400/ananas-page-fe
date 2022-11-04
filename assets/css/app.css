@@ -13,7 +13,7 @@ html{
     --btn-font:2rem;
     --p-font:1.6rem;
     --bigger-font:2.3rem;
-    --h1-font: 3rem;
+    --h1-font: 4rem;
 
     /* Font-weight */
     --regular-font:300 ;
@@ -24,13 +24,14 @@ html{
     --primary-color:#f15e2c ; 
     --text-color:#303030 ;
     --text-color-light:#808080;
-    --btn-light:#d3d3d3;
+    --btn-light:#f1f1f1;
     --white-color:#ffffff ;
     --bg-color:#4c4c4c;
 
     /* Z-index */
     --overlay:10 ;
-    --fixed:1000 ;
+    --fixed:100;
+    --fixed-modal:101;
 
     /* Transition */
     --tran-0-2:0.2s;
@@ -44,6 +45,16 @@ html{
     }
     to {
         height:100%;
+    }
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -85,12 +96,7 @@ img{
 .section{
     padding: 8rem 15rem 0 15rem;
 }
-.container{
-    max-width: 1030px;
-    width: 100%;
-    margin:0 auto;
-    padding:0 3rem;   
-}
+
 .flex{
     display: flex;
     align-items: center;
@@ -99,15 +105,18 @@ img{
 .btn{
     border: none;
     outline: none;
-    padding: 1.4rem 4rem;
-    border-radius: 3rem;
+    padding: 1rem 4rem;
     color: var(--white-color);
+    font-weight: var(--bold-font);
     background-color: var(--primary-color);
-    transition: var(--tran-0-3);
+    transition: var(--tran-0-2);
     cursor: pointer;
 }
 .btn:hover{
-    background-color: var(--primary-color-hover);
+    opacity: 0.6;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
+    box-shadow: inset 0 2px 2px rgb(0 0 0 / 8%), 0 0 8px var(--primary-color);
 }
 .section-title{
     width: 100%;
@@ -116,6 +125,13 @@ img{
     margin-bottom: 4rem;
     font-size: var(--h1-font);
 }
+
+.active{
+    color: var(--primary-color);
+}
+
+
+
 
 /* Navbar */
 .header{
@@ -221,13 +237,13 @@ img{
     position: absolute;
 }
 .nav_nu-dd::before{
-    left: 47%;
+    left: 50%;
 }
 .nav_sanpham-dd::before{
-    left: 34%;
+    left: 37%;
 }
 .nav_nam-dd::before{
-    left: 42%;
+    left: 44%;
 }
 .nav_dropdown::before{
     content: '';
@@ -340,6 +356,184 @@ img{
 
 /* END : Navbar*/
 
+
+
+/* Login - singup section */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: var(--fixed-modal);
+}
+.open {
+    display: flex !important;
+}
+.open_block{
+    display: block !important;
+}
+.modal-container {
+    position: relative;
+    background: var(--white-color);
+    width: 80rem;
+    max-width: calc(100% - 3.2rem);
+    min-height: 40rem;
+    border-radius: 2rem;
+    animation: modalFadeIn ease 0.6s;
+    perspective: 300rem;
+}
+.modal-close-left,
+.modal-close-right{
+    position: absolute;
+    top: 0;
+    padding: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: var(--btn-font);
+}
+.modal-close-left{
+    left: 0;
+}
+.modal-close-right{
+    right: 0;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+.modal-body {
+    padding: 2rem;
+}
+.modal_cover{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    transition: all ease var(--tran-0-3);
+    transform-style:preserve-3d;
+    transform-origin: left;
+}
+#flip{
+    display: none;
+}
+#flip:checked ~ .modal_cover{
+    transform: rotateY(-180deg);
+}
+.modal-cover-font,
+.modal-cover-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.modal_cover::before,
+.modal_cover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color-light);
+    opacity: 0.2;
+    z-index: 103;
+}
+.modal-cover-back{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.login-signup_form-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login_form,
+.signup_form{
+    width: calc(100% / 2 - 2rem);
+}
+.login-title-text,
+.signup-title-text{
+    font-size: var(--h1-font);
+    font-weight: var(--bold-font);
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+.login-title-text{
+    text-align: right;
+}
+.login_input-box,
+.signup_input-box{
+    height: 4rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+.login_input-box > input,
+.signup_input-box > input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--text-color-light);
+    padding: 0 1rem;
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+}
+.login_input-box > input:focus,
+.signup_input-box > input:focus{
+    border-color: var(--primary-color);
+}
+.login_forgot-pass{
+    margin: 1rem 0;
+    font-size: var(--p-font);
+    font-weight: var(--bold-font);
+}
+.login_forgot-pass >.forgot-link{
+    color: var(--primary-color);
+}
+.login_forgot-pass >.forgot-link:hover{
+    opacity: 0.6;
+}
+.areadyhave{
+    font-size: var(--p-font);
+    font-style: italic;
+    font-weight: var(--medium-font);
+}
+.areadyhave > label{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.areadyhave > label:hover{
+    opacity: 0.6;
+}
+.wr_loginName,
+.wr_loginPass,
+.wr_signupEmail,
+.wr_signupPass,
+.wr_signupPass2{
+    display: none;
+    margin-bottom: 0.2rem;
+    color: var(--primary-color);
+    font-weight: var(--bold-font);
+    font-style: italic;
+}
+.header_name-login,
+.signup_a,
+.login_a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    color: var(--white-color);
+    text-align: center;
+}
+/* End: modal */
 
 
 /* Footer */

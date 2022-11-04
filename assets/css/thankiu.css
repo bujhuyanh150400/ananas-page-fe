@@ -1,0 +1,32 @@
+main{
+    margin-top: 3.2rem;
+    height: 70rem;
+}
+.thankiu_box{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Thanhkiu_title,
+.thankiu_detail,
+.para-1,
+.para-2,
+.para-3{
+    text-align: center;
+    margin: 2rem;
+}
+.Thanhkiu_title{
+    font-size: 5rem;
+    color: var(--primary-color);
+}
+.thankiu_detail{
+    font-size: 3rem;
+    color: var(--bg-color);
+    text-transform: uppercase;
+}
+.thankiu_box > p {
+    font-size: var(--p-font);
+    font-weight: var(--medium-font);
+}
