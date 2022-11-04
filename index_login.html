@@ -27,13 +27,13 @@
     <header class="header">
         <nav class="navbar nav_landingpage">
             <div class="nav_logo">
-                <a href="index.html" class="nav_logo-link">
+                <a href="index_login.html" class="nav_logo-link">
                     <img src="/assets/img/Logo_Ananas_Header.svg" alt="" class="nav_logo-img" style="width:50px;height:87px;">
                 </a>
             </div>
             <ul class="nav_menu">
                 <li class="nav_menu-li sanpham-li">
-                    <a href="/menu.html" class="nav_menu-link">SẢN PHẨM<i class='bx bx-chevron-down'></i></a>
+                    <a href="/menu_login.html" class="nav_menu-link">SẢN PHẨM<i class='bx bx-chevron-down'></i></a>
                     <div class="nav_dropdown nav_sanpham-dd">
                         <ul class="dropbox_nav-menu sanpham-dropbox">
                             <li class="dropbox_menu-li for-men"><a href="#" class="dropbox-menu-link">NAM</a></li>
@@ -117,72 +117,13 @@
                 <input type="text" placeholder="Tìm kiếm" class="input_nav-searching">
             </div> -->
             <div class="nav_login">
-                <button class="btn btn-login js-open">Đăng nhập</button>
+                <!-- <button class="btn btn-login js-open">Đăng nhập</button> -->
+                <div class="btn"><a class="header_name-login" href="cart.html">Giỏ hàng <i class='bx bxs-cart-alt'></i> </a></div>
             </div>
         </nav>
     </header>
     <!-- End:Header -->
     
-    <!-- Login - signup modal -->
-    <div class="modal login-modal">
-        <div class="modal-container login_modal-container">
-            <div class="modal-close-left js-modal-close">
-                <i class='bx bx-x'></i>
-            </div>
-            <div class="modal-close-right js-modal-close">
-                <i class='bx bx-x'></i>
-            </div>
-            <input type="checkbox" id="flip">
-            <div class="modal_cover">
-                <div class="modal-cover-font">
-                    <img src="/assets/img/Banner_Clothing.jpg" alt="">
-                </div>
-                <div class="modal-cover-back">
-                    <img class="cover_back-img" src="/assets/img/catalogy-3.jpg" alt="">
-                </div>
-            </div>
-            <div class="modal-body">
-               <form action="#" class="login-signup_form-section">
-                    <div class="login_form">
-                        <div class="login-title">
-                            <h1 class="login-title-text">Đăng nhập</h1>
-                        </div>
-                        <div class="login_input-box">
-                            <p class="wr_loginName">Vui lòng nhập họ tên</p>
-                            <input type="text" name="" id="login_name" placeholder="Tên đăng nhập">
-                        </div>
-                        <div class="login_input-box">
-                            <p class="wr_loginPass">Vui lòng nhập mật khẩu</p>
-                            <input type="password" name="" id="login_pass" placeholder="Mật khẩu">
-                        </div>
-                        <div class="login_forgot-pass"><a href="#" class="forgot-link">Bạn quên mật khẩu ?</a></div>
-                        <div class="login_input-box btn login-btn"> <a href="index_login.html" class="login_a">Đăng nhập</a></div>
-                        <p class="areadyhave">Bạn chưa có tài khoản ? <label for="flip">Đăng kí</label></p>
-                    </div>
-                    <div class="signup_form">
-                        <div class="signup-title">
-                            <h1 class="signup-title-text">Đăng kí</h1>
-                        </div>
-                        <div class="signup_input-box">
-                            <p class="wr_signupEmail">Vui lòng nhập Email</p>
-                            <input type="text" name="" id="signup_email" placeholder="Email của bạn">
-                        </div>
-                        <div class="signup_input-box">
-                            <p class="wr_signupPass">Vui lòng nhập mật khẩu</p>
-                            <input type="password" name="" id="signup_pass" placeholder="Mật khẩu">
-                        </div>
-                        <div class="signup_input-box">
-                            <p class="wr_signupPass2">Vui lòng nhập mật khẩu nhập lại</p>
-                            <input type="password" name="" id="signup_pass2" placeholder="Nhập lại mật khẩu">
-                        </div>
-                        <button class="signup_input-box btn signup-btn"><a href="index.html" class="signup_a">Đăng kí</a></button>
-                        <p class="areadyhave">Bạn có tài khoản rồi ? <label for="flip">Đăng nhập</label></p>
-                    </div>
-               </form>
-            </div>
-        </div>
-    </div>
-
     <!-- End: Login -->
     <!-- Main -->
     <main>
@@ -392,5 +333,11 @@
     <script src="/assets/js/app.js"></script>
     <!-- Javascript -->
     <script src="/assets/js/index.js"></script>
+
+    <!-- Script -->
+    <script>
+        alert('Bạn đã đăng nhập thành công');
+    </script>
+  
 </body>
 </html>
